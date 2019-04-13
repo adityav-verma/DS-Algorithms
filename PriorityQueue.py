@@ -46,7 +46,6 @@ class PriorityQueue(object):
             self.arr.append(-1)
         return self.increase_key(self.heap_size, key)
 
-
     def maximum(self):
         """Return the maximum element in the PriorityQueue
         Run time: O(LogN)
