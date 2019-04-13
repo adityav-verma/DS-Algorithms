@@ -2,6 +2,8 @@ class PriorityQueue(object):
 
     QUEUE_UNDERFLOW = 'QueueUnderflow: No keys present in the Queue'
     INVALID_OEPRATION = 'InvalidOperation'
+    INT_MIN = -1000000000
+    INT_MAX = 1000000000
 
     def __init__(self, arr=[]):
         self.arr = []
@@ -41,9 +43,9 @@ class PriorityQueue(object):
         """
         self.heap_size = self.heap_size + 1
         if len(self.arr) > self.heap_size:
-            self.arr[self.heap_size] = -1
+            self.arr[self.heap_size] = self.INT_MIN
         else:
-            self.arr.append(-1)
+            self.arr.append(self.INT_MIN)
         return self.increase_key(self.heap_size, key)
 
     def maximum(self):
