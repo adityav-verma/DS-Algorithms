@@ -4,8 +4,10 @@ class PriorityQueue(object):
     INVALID_OEPRATION = 'InvalidOperation'
 
     def __init__(self, arr=[]):
-        self.arr = arr
-        self.heap_size = len(self.arr) - 1
+        self.arr = []
+        self.heap_size = -1
+        for key in arr:
+            self.insert(key)
 
     def __len__(self):
         return self.heap_size + 1
