@@ -42,7 +42,8 @@ class PriorityQueue(object):
             self.arr[self.heap_size] = -1
         else:
             self.arr.append(-1)
-        self.increase_key(self.heap_size, key)
+        return self.increase_key(self.heap_size, key)
+
 
     def maximum(self):
         """Return the maximum element in the PriorityQueue
@@ -78,3 +79,4 @@ class PriorityQueue(object):
             self.arr[parent], self.arr[index] = self.arr[index], self.arr[parent]
             index = parent
             parent = index >> 1
+        return new_key
