@@ -31,7 +31,7 @@ class QuickSort(object):
     @classmethod
     def _sort(cls, arr, sindex, eindex, randomized):
         """Sort the given array in the given range using QuickSort. Randomized
-        QuickSort can be used by setting the passing True to the last arg
+        QuickSort can be used by passing True to the last arg
         """
         if sindex >= eindex:
             return
